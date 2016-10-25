@@ -10,13 +10,13 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 #files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources"    # list of files/folders to symlink in homedir
-files="
-shell/bash_aliases shell/bash_autocomplete shell/bash_colors shell/bash_exports
-shell/bash_functions shell/bash_options shell/bash_profile shell/bash_prompt
-shell/bashrc
-tool/curlrc tool/wgetrc
-ruby/gemrc ruby/rspec
-git/gitattributes git/gitignore git/gitconfig git/gitmessage vim/vimrc
+files=" \
+shell/bash_aliases shell/bash_autocomplete shell/bash_colors shell/bash_exports \
+shell/bash_functions shell/bash_options shell/bash_profile shell/bash_prompt \
+shell/bashrc \
+tool/curlrc tool/wgetrc \
+ruby/gemrc ruby/rspec \
+git/gitattributes git/gitignore git/gitconfig git/gitmessage vim/vimrc \
 "
 ##########
 
