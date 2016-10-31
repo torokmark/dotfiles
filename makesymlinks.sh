@@ -30,7 +30,16 @@ git/gitmessage
 vim/vimrc
 " ##########'
 
-files="vim/vimrc"
+files="vim/vimrc
+tool/curlrc
+tool/wgetrc
+ruby/gemrc
+ruby/rspec
+git/gitattributes
+git/gitignore
+git/gitconfig
+git/gitmessage
+"
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
