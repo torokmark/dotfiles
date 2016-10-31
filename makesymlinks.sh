@@ -51,6 +51,6 @@ for file in $files; do
     	mv ~/.$purefile ~/dotfiles_old/
 	fi
     echo "Creating symlink to $purefile in home directory."
-    ln -s $dir/$link ~/.$purefile
+    ln -s $dir/$file ~/.$purefile
 done
 
