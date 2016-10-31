@@ -151,6 +151,7 @@ set number
 set numberwidth=5
 set colorcolumn=+1
 set cursorline
+set nowrap
 
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
