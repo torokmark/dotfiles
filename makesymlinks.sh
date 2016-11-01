@@ -55,7 +55,7 @@ echo "done"
 for file in $files; do
 	idx=`expr index $file /`
 	purefile=${file:idx}
-	if [ -e "../.$purefile" ]; then
+	if [ -e "~/.$purefile" ]; then
     	echo "Moving any existing dotfiles from ~ to $olddir"
     	mv ~/.$purefile ~/dotfiles_old/
 	fi
