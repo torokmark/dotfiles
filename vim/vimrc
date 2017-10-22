@@ -52,7 +52,6 @@ Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
-:source %
 :PlugInstall
 
 "" Base16 Plugin
