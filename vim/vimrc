@@ -44,15 +44,12 @@ Plug 'coderifous/textobj-word-column.vim'
 Plug 'sjl/gundo.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-startify'
-Plug 'Valloric/YouCompleteMe'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-endwise'
 Plug 'easymotion/vim-easymotion'
 
 call plug#end()
-
-:PlugInstall
 
 "" Base16 Plugin
 let base16colorspace=256  " Access colors present in 256 colorspace
