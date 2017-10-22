@@ -56,7 +56,8 @@ set softtabstop=2	" Number of spaces per Tab
 "" Advanced
 set ruler	" Show row and column ruler information
 set cmdheight=2	" Command line height
- 
+set ts=2
+
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
  
