@@ -2,6 +2,39 @@
 
 let $VIMRUNTIME="~/.vim"
 
+let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+
+if !filereadable(vimplug_exists)
+  if !executable("curl")
+    echoerr "You have to install curl or first install vim-plug yourself!"
+    execute "q!"
+  endif
+  echo "Installing Vim-Plug..."
+  echo ""
+  silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  let g:not_finish_vimplug = "yes"
+
+  autocmd VimEnter * PlugInstall
+endif
+
+"" Required
+call plug#begin(expand('~/.vim/plugged'))
+
+Plug 'chriskempson/base16-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'wellle/visual-split.vim'
+Plug 'coderifous/textobj-word-column.vim'
+Plug 'sjl/gundo.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-startify'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'tpope/vim-endwise'
+Plug 'easymotion/vim-easymotion'
+
+call plug#end()
+
 set number	" Show line numbers
 set nowrap	" Wrap lines
 set linebreak	" Break lines at word (requires Wrap lines)
@@ -27,6 +60,26 @@ set cmdheight=2	" Command line height
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
  
+"" Directories for swp files
+set nobackup
+set noswapfile
+
+set fileformats=unix,dos,mac
+
+if exists('$SHELL')
+    set shell=$SHELL
+else
+    set shell=/bin/sh
+endif
+
+"" Enable hidden buffers
+set hidden
+
+" session management
+let g:session_directory = "~/.vim/session"
+let g:session_autoload = "no"
+let g:session_autosave = "no"
+let g:session_command_aliases = 1
 
 "" Colors
 colo molokai
@@ -34,22 +87,6 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 set background=light
 
-call plug#begin('~/.vim/plugged')
-
-Plug 'chriskempson/base16-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'wellle/visual-split.vim'
-Plug 'coderifous/textobj-word-column.vim'
-Plug 'sjl/gundo.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'mhinz/vim-startify'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'tpope/vim-endwise'
-Plug 'easymotion/vim-easymotion'
-
-call plug#end()
 
 "" Base16 Plugin
 let base16colorspace=256  " Access colors present in 256 colorspace
