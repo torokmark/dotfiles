@@ -20,6 +20,9 @@ endif
 "" Required
 call plug#begin(expand('~/.vim/plugged'))
 
+"" Color
+Plug 'tomasr/molokai'
+
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
