@@ -39,10 +39,13 @@ echo "done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in "${files[@]}"; do
   purefile="${file##*/}"
+  echo "===>> Working with $purefile ========"
   if [ -e "$HOME/$purefile" ]; then
     echo "Moving any existing dotfiles from ~ to $olddir"
     mv "$HOME/$purefile" "$HOME/dotfiles_old/"
-  fi
+  fi  
+  echo "Copying $purefile to the home folder"
   cp "$HOME/dotfiles/$file" "$HOME/.$purefile"
-  echo "done"
+  echo "$purefile is done"
 done
+
