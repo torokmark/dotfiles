@@ -1,15 +1,5 @@
 #!/bin/bash
-############################
-# .make.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
-# based on/ https://github.com/michaeljsmalley/dotfiles/blob/master/makesymlinks.sh
-############################
 
-########## Variables
-
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-#files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources"    # list of files/folders to symlink in homedir
 : 'files="
 shell/bash_aliases
 shell/bash_autocompleteshell/bash_colors
@@ -30,36 +20,29 @@ git/gitmessage
 vim/vimrc
 " ##########'
 
-files="vim/vimrc
-tool/curlrc
-tool/wgetrc
-ruby/gemrc
-ruby/rspec
-git/gitattributes
-git/gitignore
-git/gitconfig
-git/gitmessage
-"
+files=("vim/vimrc"
+ "tool/curlrc"
+ "tool/wgetrc"
+ "ruby/gemrc"
+ "ruby/rspec"
+ "git/gitattributes"
+ "git/gitignore"
+ "git/gitconfig"
+ "git/gitmessage"
+)
 
 # create dotfiles_old in homedir
-echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
-mkdir -p $olddir
-echo "done"
-
-# change to the dotfiles directory
-echo -n "Changing to the $dir directory ..."
-cd $dir
+echo -n "Creating dotfiles_old for backup of any existing dotfiles in ~ ..."
+mkdir -p "$HOME/dotfiles_old"
 echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
-for file in $files; do
-	idx=`expr index $file /`
-	purefile=${file:idx}
-	if [ -e "~/.$purefile" ]; then
-    	echo "Moving any existing dotfiles from ~ to $olddir"
-    	mv ~/.$purefile ~/dotfiles_old/
-	fi
-    echo "Creating symlink to $purefile in home directory."
-    ln -s $dir/$file ~/.$purefile
+for file in "${files[@]}"; do
+  purefile="${file##*/}"
+  if [ -e "$HOME/$purefile" ]; then
+    echo "Moving any existing dotfiles from ~ to $olddir"
+    mv "$HOME/$purefile" "$HOME/dotfiles_old/"
+  fi
+  cp "$HOME/dotfiles/$file" "$HOME/.$purefile"
+  echo "done"
 done
-
