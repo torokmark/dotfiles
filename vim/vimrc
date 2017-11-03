@@ -59,7 +59,11 @@ set softtabstop=2	" Number of spaces per Tab
 "" Advanced
 set ruler	" Show row and column ruler information
 set cmdheight=2	" Command line height
-set ts=2
+set tabstop=2
+set expandtab
+retab
+
+set whichwrap+=<,>,h,l,[,]
 
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
@@ -86,6 +90,7 @@ let g:session_autosave = "no"
 let g:session_command_aliases = 1
 
 "" Colors
+syntax on
 colo molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
