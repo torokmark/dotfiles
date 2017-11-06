@@ -48,7 +48,7 @@ for dot in "${dots[@]}"; do
     mv "$HOME/.$puredot" "$HOME/dotfiles_old/"
   fi  
   echo "Making symlink on $puredot"
-  ln -sf "$HOME/dotfiles/$dot" "$HOME/.$puredot"
+  ln -s "$HOME/dotfiles/$dot" "$HOME/.$puredot"
   echo "$puredot is done"
 done
 
