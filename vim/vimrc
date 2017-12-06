@@ -90,7 +90,6 @@ let g:session_autosave = "no"
 let g:session_command_aliases = 1
 
 "" Colors
-syntax on
 colo molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
