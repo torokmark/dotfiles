@@ -62,6 +62,7 @@ set cmdheight=2	" Command line height
 set tabstop=2
 set expandtab
 retab
+set scrolloff=10
 
 set whichwrap+=<,>,h,l,[,]
 
