@@ -91,11 +91,10 @@ let g:session_autosave = "no"
 let g:session_command_aliases = 1
 
 "" Colors
-colo molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 set background=light
-
+colo cobalt
 
 "" Base16 Plugin
 let base16colorspace=256  " Access colors present in 256 colorspace
