@@ -68,7 +68,7 @@ set whichwrap+=<,>,h,l,[,]
 
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
- 
+
 "" Directories for swp files
 set nobackup
 set noswapfile
@@ -101,3 +101,6 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 
 "" Airline Plugin
 let g:airline#extensions#tabline#enabled = 1
+
+"" Filetype detection
+autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
