@@ -96,6 +96,11 @@ let g:rehash256 = 1
 set background=light
 colo cobalt
 
+set cursorline
+set colorcolumn=100
+set cursorcolumn
+
+
 "" Base16 Plugin
 let base16colorspace=256  " Access colors present in 256 colorspace
 
