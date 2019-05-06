@@ -96,7 +96,7 @@ let g:session_command_aliases = 1
 let g:molokai_original = 1
 let g:rehash256 = 1
 set background=light
-colo cobalt 
+colo cobalt
 
 set cursorline
 set colorcolumn=80
@@ -107,3 +107,6 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 
 "" Airline Plugin
 let g:airline#extensions#tabline#enabled = 1
+
+"" Filetype detection
+autocmd BufNewFile,BufRead *.slim setlocal filetype=slim

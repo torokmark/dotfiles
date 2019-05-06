@@ -21,6 +21,7 @@ alias n="npm"
 alias path='printf "%b\n" "${PATH//:/\\n}"'
 alias q="exit"
 alias rm="rm -rf --"
+alias ls='ls --color -h --group-directories-first'
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
