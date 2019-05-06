@@ -42,7 +42,7 @@ set number	" Show line numbers
 set nowrap	" Wrap lines
 set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++	" Wrap-broken line prefix
-set textwidth=100	" Line wrap (number of cols)
+set textwidth=0  " set textwidth=120	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
  
 set hlsearch	" Highlight all search results
@@ -68,7 +68,9 @@ set whichwrap+=<,>,h,l,[,]
 
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
- 
+
+set nofoldenable
+
 "" Directories for swp files
 set nobackup
 set noswapfile
@@ -91,11 +93,14 @@ let g:session_autosave = "no"
 let g:session_command_aliases = 1
 
 "" Colors
-colo molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 set background=light
+colo cobalt 
 
+set cursorline
+set colorcolumn=80
+set cursorcolumn
 
 "" Base16 Plugin
 let base16colorspace=256  " Access colors present in 256 colorspace

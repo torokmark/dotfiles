@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/torokm/munka/dev/github/peds/dast/tests/set'
+let g:netrw_dirhist_2='/home/torokm/munka/dev/github/peds'
+let g:netrw_dirhist_3='/home/torokm/munka/dev/github/peds/dast'
+let g:netrw_dirhist_4='/home/torokm/munka/dev/github/peds/dast/tests'
+let g:netrw_dirhist_5='/home/torokm/munka/dev/github/peds/dast/tests/set'
+let g:netrw_dirhist_6='/home/torokm/munka/dev/github/peds'
+let g:netrw_dirhist_7='/home/torokm/munka/dev/github/peds/dast'
