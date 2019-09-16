@@ -59,8 +59,9 @@ set softtabstop=2	" Number of spaces per Tab
 "" Advanced
 set ruler	" Show row and column ruler information
 set cmdheight=2	" Command line height
-set tabstop=2
-set expandtab
+" set tabstop=2
+" set expandtab
+set expandtab ts=4 sw=4 ai
 retab
 set scrolloff=10
 
